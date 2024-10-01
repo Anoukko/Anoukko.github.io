@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(35, 50, 70, 0.8), rgba(48, 67, 90, 0.8)), url(images/Mountain.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+nav{
+    display: flex;
+    padding: 6% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+    height: 30.5px;
+    position: relative;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0f2058;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #0f2058;
+    background: #0f2058;
+    opacity: 0.8;
+    transition: 0.7s;
+}
+nav .fi{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 25px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .McButton{
+        position: absolute;
+        right: 4vw;
+        top: calc(6vw + 3px);
+        width: 28px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .McButton b{
+        position: absolute;
+        left: 0;
+        width: 28px;
+        height: 2.5px;
+        border-radius: 2.5px;
+        background-color: #fff;
+    }
+    .McButton b:nth-child(1){
+        top: 0;
+    }
+    .McButton b:nth-child(2){
+        top: 50%;
+    }
+    .McButton b:nth-child(3){
+        top: 100%;
+    }
+    .nav-links ul{
+        position: absolute;
+        background: #0f2058;
+        height: 100vh;
+        width: 23vw;
+        top: 0;
+        right: -23vw;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav-links ul li{
+        top: 10%;
+    }
+}
+
+/*--PROJECTS--*/
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}

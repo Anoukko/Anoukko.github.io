@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>AMMS STUDIOS</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    </head>
 
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                    <ul data="menu">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">PROJECTS</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">SETTINGS</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="text-box">
+                <h1>Web Developer For Hire</h1>
+                <p>At AMMS STUDIO you will get fine tuned websites of any type. <br>I will develop websites for blogs, portfolios, events, memberships, or for any other purpose.</p>
+                <a href="" class="hero-btn">Click To Learn More</a>
+            </div>
+        </section>
+
+<!--PROJECTS-->
+        <section class="projects">
+            <h1>Projects I've Made</h1>
+            <p>*Insert future projects here*</p>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+
+<!--JavaScript for toggle menu-->
+        <script>
+            var McButton = $("[data=hamburger-menu]");
+            var McBar1 = McButton.find("b:nth-child(1)");
+            var McBar2 = McButton.find("b:nth-child(2)");
+            var McBar3 = McButton.find("b:nth-child(3)");
+            var ToggleMenu = $("[data=menu]");
+
+
+            McButton.click( function() {
+                $(this).toggleClass("active");
+
+                if (McButton.hasClass("active")) {
+                    ToggleMenu.velocity({ right: "0" }, {duration: 400, delay: 200, easing: "swing"});
+                    McBar1.velocity({ top: "50%" }, {duration: 200, easing: "swing"});
+                    McBar3.velocity({ top: "50%" }, {duration: 200, easing: "swing"})
+                        .velocity({rotateZ:"90deg"}, {duration: 800, delay: 200, easing: [500,20] });
+                    McButton.velocity({rotateZ:"135deg"}, {duration: 800, delay: 200, easing: [500,20] });
+                    
+                }
+
+                else {
+                    
+                    McButton.velocity("reverse");
+                    ToggleMenu.velocity("reverse");
+                    McBar3.velocity({rotateZ:"0deg"}, {duration: 600, easing: [500,20] })
+                        .velocity({ top: "100%" }, {duration: 200, easing: "swing"});
+                    McBar1.velocity("reverse", {delay: 600});
+                }
+            });
+        </script>
+
+    </body>
+</html>
+
+
+
+<!--
+Husk at paste følgende i bunden af siden, hvis du ender med at bruge uicons af Flaticon:
+Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+-->
